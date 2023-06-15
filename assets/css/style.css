@@ -63,6 +63,21 @@ body{
     color: white;
     margin-block-end: 20px;
 }
+
+.carrusel{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 30px;
+    gap: 10px;
+}
+
+.carrusel a{
+    text-decoration: none;
+    color: white;
+    outline: 2px solid green;
+}
 .aside{
     grid-area: aside;
     background-color: rgb(29, 107, 5);
