@@ -37,6 +37,23 @@ body{
     display: flex;
     align-items: center;
     margin-left: 10px;
+    gap: 5px;
+    background: linear-gradient(140deg, #ffdd0a 2%, #085f0b 100%);
+    animation: icono 3s cubic-bezier(0.11, 0, 0.5, 0) 0s infinite alternate backwards;
+}
+
+@keyframes icono {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.2;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
 
@@ -47,14 +64,56 @@ body{
     flex-direction: column;
     align-items: center;
     padding: 30px;
-    
 }
 
 .main img{
-    outline: 10px solid black;
-    width: 200px;
-    height: 250px;
+    outline: 5px solid rgb(0 0 0);
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+    width: 300px;
+    height: 200px;
+    animation: myAnim 8s ease 0s 3 normal forwards;
+
 }
+
+.pro_img:hover{
+    filter: grayscale(0%);
+    height: 250px;
+    width: 350px;
+        
+}
+
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
+
+
+
+
 
 .main button{
     background-color: rgb(29, 107, 5);
@@ -132,12 +191,13 @@ header{
 
     .header{
         display: flex;
-    grid-area: header;
-    background-color: rgb(60 199 18);
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-start;
+        grid-area: header;
+        background-color: rgb(60 199 18);
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
     }
+
     .header img{
         height: 40px;
         width: 40px;
@@ -152,24 +212,32 @@ header{
 
     .main{
         display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    font-size: 12px;
-    align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: 12px;
+        align-items: center;
     }
 
+    .pro_img:hover{
+        filter: grayscale(0%);
+        width:250px ;
+        height: 160px;
+    }
+    
     .main img{
-        outline: 5px solid black;
-    width: 210px;
-    height: 150px;
+        outline: 5px solid rgb(0 0 0);
+        filter: grayscale(100%);
+        transition: filter 0.5s ease;
+        width: 210px;
+        height: 140px;
     }
 
     .main button{
         background-color: rgb(29, 107, 5);
-    padding: 5px;
-    width: 100px;
-    color: white;
+        padding: 5px;
+        width: 100px;
+        color: white;
     }
     .menu__hamb{
         display: none;
